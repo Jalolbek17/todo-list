@@ -1,0 +1,112 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+/* MAIN */
+
+body {
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #57B19F;
+    padding: 0 1.5rem;
+}
+
+.container {
+    background: #fff;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1.6rem 1.6rem 0 1.6rem;
+    border-radius: 5px;
+    border: 2px solid #DEDEDE;
+    /* max-width: 470px; */
+    width: 100%;
+    box-shadow: 3px 3px 15px rgba(0,0,0,.05);
+}
+
+.add-task {
+    display: flex;
+}
+
+#task-name {
+    margin-right: 1rem;
+    padding: .7rem 0;
+    border-bottom: 2px solid #DEDEDE;
+    transition: .1s;
+    min-width: 10%;
+    flex-grow: 1;
+}
+
+#task-name:focus {
+    border-bottom-color: #343434;
+}
+
+#task-name::placeholder {
+    color: #999;
+}
+
+.btn {
+    cursor: pointer;
+    background: #F1F1F1;
+    padding: .8rem 1rem;
+    border-radius: 3px;
+    transition: .1s, transform .05s;
+}
+
+.btn:hover {
+    background: #dedede;
+}
+
+.btn:active {
+    color: #fff;
+    transform: translateY(1px);
+}
+
+.new-task {
+    white-space: nowrap;
+}
+
+.reset-task {
+    width: 100%;
+    margin: 1.4rem 0 1.6rem 0;
+}
+
+.task {
+    list-style: none;
+    margin: 2.2rem 0;
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+}
+
+.task:first-child {
+    margin-top: .5rem;
+}
+
+.task::after {
+    content: "";
+    position: absolute;
+    left: -2%;
+    top: 50%;
+    width: 0%;
+    height: 2px;
+    background: #000;
+    transition: .15s;
+}
+
+.task.done::after {
+    width: 104%;
+}
